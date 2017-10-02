@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>API Definitions</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <script src="./handlebars-v4.0.10.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script id="hb-api-template" type="text/x-handlebars-template">
+
+        <!-- people is looked up on the global context, the one we pass to the compiled template -->
+
+        {{#each people}}
+
+        <!-- Here the context is each individual person. So we can access its properties directly: -->
+        <p>{{firstName}} {{lastName}}</p>
+
+        {{/each}}
+    </script>
+    <script src="./api-config.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="icon-api.png" class="img-rounded" alt="API-ICON">
+            </div>
+            <div class="col-sm-10">
+                <h1>Web-API Services</h1>
+                <p>Developer Portal</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Overview</h3>
+                <p>API Developer portal.</p>
+                <div class="hb-api-content"></div>
+            </div>
+            <div class="col-sm-4">
+                <h3>API Catalog</h3>
+                <div>
+                    <li>
+                        <A href="http://localhost:8080/?url=http://localhost:8080/api/pets-1.yaml">Pets 1</A>
+                    </li>
+                    <li>
+                        <A href="http://localhost:8080/?url=http://localhost:8080/api/pets-2.yaml">Pets 2</A>
+                    </li>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>SDK's</h3>
+                <p>Programming Language</p>
+                <div>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>Golang</li>
+                    <li>C++</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
