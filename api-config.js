@@ -7,12 +7,10 @@ $(function() {
 
     // This is the default context, which is passed to the template
     var context = {
-        people: [
-            { firstName: 'Homer', lastName: 'Simpson' },
-            { firstName: 'Peter', lastName: 'Griffin' },
-            { firstName: 'Eric', lastName: 'Cartman' },
-            { firstName: 'Kenny', lastName: 'McCormick' },
-            { firstName: 'Bart', lastName: 'Simpson' }
+        api: [
+            { name: 'Pets-1', url: "http://localhost:8080/?url=http://localhost:8080/api/pets-1.yaml" },
+            { name: 'Pets-2', url: "http://localhost:8080/?url=http://localhost:8080/api/pets-2.yaml" },
+            { name: 'Pets-3', url: "http://localhost:8080/?url=http://localhost:8080/api/pets-1.yaml" },
         ]
     };
 

@@ -15,10 +15,12 @@
 
         <!-- people is looked up on the global context, the one we pass to the compiled template -->
 
-        {{#each people}}
+        {{#each api}}
 
         <!-- Here the context is each individual person. So we can access its properties directly: -->
-        <p>{{firstName}} {{lastName}}</p>
+        <li>
+            <A href='{{url}}'>{{name}}</A>
+        </li>
 
         {{/each}}
     </script>
@@ -44,18 +46,10 @@
             <div class="col-sm-4">
                 <h3>Overview</h3>
                 <p>API Developer portal.</p>
-                <div class="hb-api-content"></div>
             </div>
             <div class="col-sm-4">
                 <h3>API Catalog</h3>
-                <div>
-                    <li>
-                        <A href="http://localhost:8080/?url=http://localhost:8080/api/pets-1.yaml">Pets 1</A>
-                    </li>
-                    <li>
-                        <A href="http://localhost:8080/?url=http://localhost:8080/api/pets-2.yaml">Pets 2</A>
-                    </li>
-                </div>
+                <div class="hb-api-content"></div>
             </div>
             <div class="col-sm-4">
                 <h3>SDK's</h3>
